@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký Tư Vấn Du Học Hàn Quốc | Hikorean</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-animation">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <div class="container">
+        <header class="form-header">
+            <h1 class="logo-title">HIKOREAN</h1>
+            <h2>Hồ Sơ Năng Lực Du Học Hàn Quốc 2026</h2>
+            <p>Điền đủ thông tin để nhận lộ trình du học chuyên biệt và cam kết tỷ lệ đỗ Visa cao nhất từ chuyên gia Hikorean.</p>
+        </header>
+
+        <form id="duHocForm" class="glass-form" autocomplete="off">
+            <div class="form-group">
+                <label for="fullName">1. Họ và tên của em <span class="required">*</span></label>
+                <input type="text" id="fullName" name="fullName" placeholder="VD: Nguyễn Văn A" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">2. Số điện thoại (Zalo) liên hệ <span class="required">*</span></label>
+                <input type="tel" id="phone" name="phone" placeholder="VD: 0987xxx..." required>
+            </div>
+
+            <div class="form-group">
+                <label for="education">3. Năm sinh & Bậc học cao nhất đã/sẽ tốt nghiệp <span class="required">*</span></label>
+                <input type="text" id="education" name="education" placeholder="VD: Sinh năm 2005 - Tốt nghiệp THPT 2023" required>
+            </div>
+
+            <div class="form-group">
+                <label for="gpa">4. Điểm trung bình (GPA) các năm <span class="required">*</span></label>
+                <input type="text" id="gpa" name="gpa" placeholder="VD: Lớp 10: 7.5, Lớp 11: 8.0, Lớp 12: 8.1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="hometown">5. Quê quán (Tỉnh/Thành phố theo hộ khẩu) <span class="required">*</span></label>
+                <input type="text" id="hometown" name="hometown" placeholder="VD: Nghệ An, Hà Nội..." required>
+            </div>
+
+            <div class="form-group">
+                <label>6. Em có người thân đang ở Hàn Quốc không? <span class="required">*</span></label>
+                <div class="radio-group">
+                    <label class="radio-card">
+                        <input type="radio" name="relative" value="Không có ai" required>
+                        <span class="radio-content">Không có ai</span>
+                    </label>
+                    <label class="radio-card">
+                        <input type="radio" name="relative" value="Đang làm việc hợp pháp / Kết hôn">
+                        <span class="radio-content">Có (Hợp pháp)</span>
+                    </label>
+                    <label class="radio-card">
+                        <input type="radio" name="relative" value="Đang làm việc bất hợp pháp">
+                        <span class="radio-content">Có (Bất hợp pháp)</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="koreanLevel">7. Trình độ tiếng Hàn hiện tại (TOPIK?) <span class="required">*</span></label>
+                <input type="text" id="koreanLevel" name="koreanLevel" placeholder="VD: Đang học sơ cấp 2, hoặc TOPIK 2" required>
+            </div>
+
+            <div class="form-group">
+                <label for="finance">8. Mức tài chính gia đình chuẩn bị ban đầu <span class="required">*</span></label>
+                <select id="finance" name="finance" required>
+                    <option value="" disabled selected>Chọn mức tài chính dự kiến</option>
+                    <option value="Dưới 150 triệu">Dưới 150 triệu</option>
+                    <option value="150 - 200 triệu">150 - 200 triệu</option>
+                    <option value="200 - 300 triệu">200 - 300 triệu</option>
+                    <option value="Mức khác / Chưa rõ">Mức khác / Chưa rõ</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="desire">9. Nguyện vọng về khu vực & Ngành học <span class="required">*</span></label>
+                <textarea id="desire" name="desire" rows="3" placeholder="Ví dụ: Em muốn học truyền thông ở Seoul, hoặc muốn vùng rẻ như Busan..." required></textarea>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" id="submitBtn" class="btn-submit">
+                    <span class="btn-text">Gửi Yêu Cầu Tư Vấn</span>
+                    <div class="loader-spinner"></div>
+                </button>
+            </div>
+            <div id="statusMessage" class="status-message"></div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
