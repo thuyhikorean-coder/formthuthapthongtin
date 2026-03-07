@@ -105,7 +105,7 @@ body {
 }
 
 .logo-title {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 2.5rem;
     font-weight: 800;
     letter-spacing: 2px;
@@ -115,8 +115,9 @@ body {
 }
 
 .form-header h2 {
-    font-family: 'Outfit', sans-serif;
-    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
     margin-bottom: 0.75rem;
     color: var(--secondary);
 }
@@ -266,7 +267,7 @@ input::placeholder, textarea::placeholder {
     color: var(--secondary);
     border: none;
     border-radius: 12px;
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.1rem;
     font-weight: 700;
     letter-spacing: 1px;
