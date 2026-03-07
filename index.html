@@ -16,6 +16,7 @@
 
     <div class="container">
         <header class="form-header">
+            <img src="logo.jpg" alt="Hikorean Form Logo" class="brand-logo">
             <h1 class="logo-title">HIKOREAN</h1>
             <h2>Hồ Sơ Năng Lực Du Học Hàn Quốc 2026</h2>
             <p>Điền đủ thông tin để nhận lộ trình du học chuyên biệt và cam kết tỷ lệ đỗ Visa cao nhất từ chuyên gia Hikorean.</p>
@@ -66,12 +67,30 @@
             </div>
 
             <div class="form-group">
-                <label for="koreanLevel">7. Trình độ tiếng Hàn hiện tại (TOPIK?) <span class="required">*</span></label>
-                <input type="text" id="koreanLevel" name="koreanLevel" placeholder="VD: Đang học sơ cấp 2, hoặc TOPIK 2" required>
+                <label for="parentsJob">7. Bố mẹ em đang làm công việc gì? Thu nhập hàng tháng của gia đình là bao nhiêu? <span class="required">*</span></label>
+                <textarea id="parentsJob" name="parentsJob" rows="2" placeholder="VD: Bố mẹ làm nông nghiệp / kinh doanh, thu nhập khoảng 20tr/tháng..." required></textarea>
             </div>
 
             <div class="form-group">
-                <label for="finance">8. Mức tài chính gia đình chuẩn bị ban đầu <span class="required">*</span></label>
+                <label>8. Gia đình có sẵn sổ tiết kiệm ngân hàng (thường yêu cầu ~10,000 USD gửi tối thiểu 6 tháng) chưa, hay cần phía trung tâm hỗ trợ làm dịch vụ chứng minh ngoại hình/tài chính? <span class="required">*</span></label>
+                <div class="radio-group" style="flex-direction: column;">
+                    <label class="radio-card">
+                        <input type="radio" name="bankBook" value="Đã có sổ tiết kiệm đủ điều kiện" required>
+                        <span class="radio-content">Đã có sổ tiết kiệm gửi đủ số tháng</span>
+                    </label>
+                    <label class="radio-card">
+                        <input type="radio" name="bankBook" value="Có tiền nhưng chưa lập sổ / chưa đủ thời gian">
+                        <span class="radio-content">Có tài chính nhưng chưa đủ 6 tháng</span>
+                    </label>
+                    <label class="radio-card">
+                        <input type="radio" name="bankBook" value="Cần trung tâm hỗ trợ dịch vụ chứng minh">
+                        <span class="radio-content">Cần trung tâm hỗ trợ DV tài chính</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="finance">9. Mức tài chính gia đình có thể chuẩn bị ban đầu khoảng bao nhiêu? <span class="required">*</span></label>
                 <select id="finance" name="finance" required>
                     <option value="" disabled selected>Chọn mức tài chính dự kiến</option>
                     <option value="Dưới 150 triệu">Dưới 150 triệu</option>
@@ -82,8 +101,29 @@
             </div>
 
             <div class="form-group">
-                <label for="desire">9. Nguyện vọng về khu vực & Ngành học <span class="required">*</span></label>
-                <textarea id="desire" name="desire" rows="3" placeholder="Ví dụ: Em muốn học truyền thông ở Seoul, hoặc muốn vùng rẻ như Busan..." required></textarea>
+                <label for="koreanLevel">10. Trình độ tiếng Hàn hiện tại của em là gì? <span class="required">*</span></label>
+                <input type="text" id="koreanLevel" name="koreanLevel" placeholder="VD: Đang học sơ cấp 2, hoặc TOPIK 2" required>
+            </div>
+
+            <div class="form-group">
+                <label for="studySystem">11. Em muốn học hệ tiếng (D4-1) hay Hệ đại học (D2-2), hay thạc sỹ (D2-3)? <span class="required">*</span></label>
+                <select id="studySystem" name="studySystem" required>
+                    <option value="" disabled selected>Chọn hệ dự định du học</option>
+                    <option value="Hệ học tiếng (D4-1)">Hệ học tiếng (D4-1)</option>
+                    <option value="Hệ Đại học (D2-2)">Hệ Đại học (D2-2)</option>
+                    <option value="Hệ Thạc sĩ (D2-3)">Hệ Thạc sĩ (D2-3)</option>
+                    <option value="Chưa rõ định hướng / Cần tư vấn thêm">Chưa rõ định hướng / Cần tư vấn</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="majorDesire">12. Nếu đi học tiếng, thì lên chuyên ngành em muốn học chuyên ngành gì? <span class="required">*</span></label>
+                <input type="text" id="majorDesire" name="majorDesire" placeholder="VD: Truyền thông, Kinh doanh, Thẩm mỹ..." required>
+            </div>
+
+            <div class="form-group">
+                <label for="desire">13. Nguyện vọng về khu vực học của em (Seoul, Busan...) <span class="required">*</span></label>
+                <textarea id="desire" name="desire" rows="2" placeholder="Ví dụ: Em muốn học ở Seoul cho sầm uất, hoặc Busan cho dễ tìm việc làm..." required></textarea>
             </div>
 
             <div class="form-actions">
