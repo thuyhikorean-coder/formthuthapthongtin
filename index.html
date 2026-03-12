@@ -18,115 +18,252 @@
         <header class="form-header">
             <img src="logo.jpg" alt="Hikorean Form Logo" class="brand-logo">
             <h1 class="logo-title">HIKOREAN</h1>
-            <h2>Hồ Sơ Năng Lực Du Học Hàn Quốc 2026</h2>
-            <p>Điền đủ thông tin để nhận lộ trình du học chuyên biệt và cam kết tỷ lệ đỗ Visa cao nhất từ chuyên gia Hikorean.</p>
+            <h2>Hồ Sơ Năng Lực Du Học Hàn Quốc</h2>
+            <p>Điền đủ và chính xác thông tin để hồ sơ được xét duyệt nhanh chóng và cam kết tỷ lệ đỗ Visa cao nhất từ Hikorean.</p>
         </header>
 
         <form id="duHocForm" class="glass-form" autocomplete="off">
-            <div class="form-group">
-                <label for="fullName">1. Họ và tên của em <span class="required">*</span></label>
-                <input type="text" id="fullName" name="fullName" placeholder="VD: Nguyễn Văn A" required>
+            <!-- PHẦN 1: THÔNG TIN CÁ NHÂN -->
+            <h3 class="section-title">I. THÔNG TIN CÁ NHÂN</h3>
+            
+            <div class="form-row">
+                <div class="form-group half-width">
+                    <label>Họ và Tên <span class="required">*</span></label>
+                    <input type="text" name="fullName" placeholder="VD: Vũ Tâm Như" required>
+                </div>
+                <div class="form-group half-width">
+                    <label>Giới tính <span class="required">*</span></label>
+                    <select name="gender" required>
+                        <option value="" disabled selected>Chọn giới tính</option>
+                        <option value="Nam">Nam</option>
+                        <option value="Nữ">Nữ</option>
+                    </select>
+                </div>
             </div>
 
-            <div class="form-group">
-                <label for="phone">2. Số điện thoại (Zalo) liên hệ <span class="required">*</span></label>
-                <input type="tel" id="phone" name="phone" placeholder="VD: 0987xxx..." required>
-            </div>
-
-            <div class="form-group">
-                <label for="education">3. Năm sinh & Bậc học cao nhất đã/sẽ tốt nghiệp <span class="required">*</span></label>
-                <input type="text" id="education" name="education" placeholder="VD: Sinh năm 2005 - Tốt nghiệp THPT 2023" required>
-            </div>
-
-            <div class="form-group">
-                <label for="gpa">4. Điểm trung bình (GPA) các năm <span class="required">*</span></label>
-                <input type="text" id="gpa" name="gpa" placeholder="VD: Lớp 10: 7.5, Lớp 11: 8.0, Lớp 12: 8.1" required>
-            </div>
-
-            <div class="form-group">
-                <label for="hometown">5. Quê quán (Tỉnh/Thành phố theo hộ khẩu) <span class="required">*</span></label>
-                <input type="text" id="hometown" name="hometown" placeholder="VD: Nghệ An, Hà Nội..." required>
-            </div>
-
-            <div class="form-group">
-                <label>6. Em có người thân đang ở Hàn Quốc không? <span class="required">*</span></label>
-                <div class="radio-group">
-                    <label class="radio-card">
-                        <input type="radio" name="relative" value="Không có ai" required>
-                        <span class="radio-content">Không có ai</span>
-                    </label>
-                    <label class="radio-card">
-                        <input type="radio" name="relative" value="Đang làm việc hợp pháp / Kết hôn">
-                        <span class="radio-content">Có (Hợp pháp)</span>
-                    </label>
-                    <label class="radio-card">
-                        <input type="radio" name="relative" value="Đang làm việc bất hợp pháp">
-                        <span class="radio-content">Có (Bất hợp pháp)</span>
-                    </label>
+            <div class="form-row">
+                <div class="form-group half-width">
+                    <label>Ngày sinh <span class="required">*</span></label>
+                    <input type="date" name="dob" required>
+                </div>
+                <div class="form-group half-width">
+                    <label>Nơi sinh <span class="required">*</span></label>
+                    <input type="text" name="birthplace" placeholder="VD: Thái Bình" required>
                 </div>
             </div>
 
             <div class="form-group">
-                <label for="parentsJob">7. Bố mẹ em đang làm công việc gì? Thu nhập hàng tháng của gia đình là bao nhiêu? <span class="required">*</span></label>
-                <textarea id="parentsJob" name="parentsJob" rows="2" placeholder="VD: Bố mẹ làm nông nghiệp / kinh doanh, thu nhập khoảng 20tr/tháng..." required></textarea>
+                <label>Địa chỉ (Chi tiết thôn, xóm...) <span class="required">*</span></label>
+                <input type="text" name="address" placeholder="VD: Tổ 6, TT. An Bài, Quỳnh Phụ..." required>
             </div>
 
+            <div class="form-row">
+                <div class="form-group half-width">
+                    <label>Điện thoại di động <span class="required">*</span></label>
+                    <input type="tel" name="phoneMobile" placeholder="VD: 0987xxx..." required>
+                </div>
+                <div class="form-group half-width">
+                    <label>Email Cá nhân</label>
+                    <input type="email" name="email" placeholder="VD: email@gmail.com">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group third-width">
+                    <label>Số Hộ Chiếu</label>
+                    <input type="text" name="passportNo" placeholder="P0384...">
+                </div>
+                <div class="form-group third-width">
+                    <label>Ngày cấp HC</label>
+                    <input type="date" name="passportDate">
+                </div>
+                <div class="form-group third-width">
+                    <label>Hết hạn HC</label>
+                    <input type="date" name="passportExp">
+                </div>
+            </div>
+
+            <!-- PHẦN 2: LỊCH SỬ HỌC TẬP -->
+            <h3 class="section-title">II. LỊCH SỬ HỌC TẬP</h3>
+
+            <div class="form-row">
+                <div class="form-group half-width">
+                    <label>Bậc học cao nhất <span class="required">*</span></label>
+                    <select name="highestEdu" required>
+                        <option value="" disabled selected>Chọn</option>
+                        <option value="THPT">Tốt nghiệp THPT (Cấp 3)</option>
+                        <option value="Sinh viên ĐH/CĐ">Đang là Sinh viên ĐH/CĐ</option>
+                        <option value="Đã tốt nghiệp ĐH/CĐ">Đã Tốt nghiệp ĐH/CĐ</option>
+                        <option value="Thạc sĩ">Thạc sĩ</option>
+                    </select>
+                </div>
+                <div class="form-group half-width">
+                    <label>Năm tốt nghiệp <span class="required">*</span></label>
+                    <input type="text" name="gradYear" placeholder="VD: 2024" required>
+                </div>
+            </div>
+
+            <label style="margin-bottom:1rem;color:var(--primary-dark);font-weight:700">➜ TRƯỜNG THPT (Cấp 3)</label>
+            <div class="form-row">
+                <div class="form-group half-width">
+                    <label>Tên trường THPT <span class="required">*</span></label>
+                    <input type="text" name="hsName" placeholder="VD: THPT Phụ Dực" required>
+                </div>
+                <div class="form-group half-width">
+                    <label>SĐT Trường THPT</label>
+                    <input type="tel" name="hsPhone" placeholder="SĐT liên hệ nhà trường...">
+                </div>
+            </div>
+            
             <div class="form-group">
-                <label>8. Gia đình có sẵn sổ tiết kiệm ngân hàng (thường yêu cầu ~10,000 USD gửi tối thiểu 6 tháng) chưa, hay cần phía trung tâm hỗ trợ làm dịch vụ chứng minh ngoại hình/tài chính? <span class="required">*</span></label>
-                <div class="radio-group" style="flex-direction: column;">
-                    <label class="radio-card">
-                        <input type="radio" name="bankBook" value="Đã có sổ tiết kiệm đủ điều kiện" required>
-                        <span class="radio-content">Đã có sổ tiết kiệm gửi đủ số tháng</span>
-                    </label>
-                    <label class="radio-card">
-                        <input type="radio" name="bankBook" value="Có tiền nhưng chưa lập sổ / chưa đủ thời gian">
-                        <span class="radio-content">Có tài chính nhưng chưa đủ 6 tháng</span>
-                    </label>
-                    <label class="radio-card">
-                        <input type="radio" name="bankBook" value="Cần trung tâm hỗ trợ dịch vụ chứng minh">
-                        <span class="radio-content">Cần trung tâm hỗ trợ DV tài chính</span>
-                    </label>
+                <label>Địa chỉ trường THPT <span class="required">*</span></label>
+                <input type="text" name="hsAddress" placeholder="Chi tiết địa chỉ trường..." required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group third-width">
+                    <label>Điểm Lớp 10 <span class="required">*</span></label>
+                    <input type="text" name="gpa10" placeholder="VD: 8.7" required>
+                </div>
+                <div class="form-group third-width">
+                    <label>Điểm Lớp 11 <span class="required">*</span></label>
+                    <input type="text" name="gpa11" placeholder="VD: 9.0" required>
+                </div>
+                <div class="form-group third-width">
+                    <label>Điểm Lớp 12 <span class="required">*</span></label>
+                    <input type="text" name="gpa12" placeholder="VD: 8.9" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group third-width">
+                    <label>Điểm danh vắng 10</label>
+                    <input type="number" name="absent10" placeholder="Số buổi" value="0">
+                </div>
+                <div class="form-group third-width">
+                    <label>Điểm danh vắng 11</label>
+                    <input type="number" name="absent11" placeholder="Số buổi" value="0">
+                </div>
+                <div class="form-group third-width">
+                    <label>Điểm danh vắng 12</label>
+                    <input type="number" name="absent12" placeholder="Số buổi" value="0">
+                </div>
+            </div>
+
+            <label style="margin-top:1rem;margin-bottom:1rem;color:var(--primary-dark);font-weight:700">➜ BẬC ĐẠI HỌC / CAO ĐẲNG (Nếu có, không có thì bỏ qua)</label>
+            <div class="form-row">
+                <div class="form-group half-width">
+                    <label>Trường ĐH/CĐ</label>
+                    <input type="text" name="uniName" placeholder="Tên trường ĐH...">
+                </div>
+                <div class="form-group half-width">
+                    <label>Chuyên ngành</label>
+                    <input type="text" name="uniMajor" placeholder="Chuyên ngành...">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group third-width">
+                    <label>GPA Đại học</label>
+                    <input type="text" name="uniGpa" placeholder="Điểm hệ 4 hoặc 10">
+                </div>
+                <div class="form-group third-width">
+                    <label>SĐT Trường ĐH</label>
+                    <input type="tel" name="uniPhone" placeholder="SĐT trường...">
+                </div>
+                <div class="form-group third-width">
+                    <label>Email Trường ĐH</label>
+                    <input type="email" name="uniEmail" placeholder="Email...">
+                </div>
+            </div>
+
+
+            <!-- PHẦN 3: GIA ĐÌNH VÀ TÀI CHÍNH -->
+            <h3 class="section-title">III. GIA ĐÌNH VÀ TÀI CHÍNH</h3>
+            <div class="form-group">
+                <label>Tổng số người trong gia đình <span class="required">*</span></label>
+                <input type="number" name="familyCount" placeholder="VD: 4" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group third-width">
+                    <label>Họ tên Bố <span class="required">*</span></label>
+                    <input type="text" name="dadName" required>
+                </div>
+                <div class="form-group third-width">
+                    <label>Nghề nghiệp Bố</label>
+                    <input type="text" name="dadJob">
+                </div>
+                <div class="form-group third-width">
+                    <label>SĐT Bố</label>
+                    <input type="tel" name="dadPhone">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group third-width">
+                    <label>Họ tên Mẹ <span class="required">*</span></label>
+                    <input type="text" name="momName" required>
+                </div>
+                <div class="form-group third-width">
+                    <label>Nghề nghiệp Mẹ</label>
+                    <input type="text" name="momJob">
+                </div>
+                <div class="form-group third-width">
+                    <label>SĐT Mẹ</label>
+                    <input type="tel" name="momPhone">
                 </div>
             </div>
 
             <div class="form-group">
-                <label for="finance">9. Mức tài chính gia đình có thể chuẩn bị ban đầu khoảng bao nhiêu? <span class="required">*</span></label>
-                <select id="finance" name="finance" required>
-                    <option value="" disabled selected>Chọn mức tài chính dự kiến</option>
-                    <option value="Dưới 150 triệu">Dưới 150 triệu</option>
-                    <option value="150 - 200 triệu">150 - 200 triệu</option>
-                    <option value="200 - 300 triệu">200 - 300 triệu</option>
-                    <option value="Mức khác / Chưa rõ">Mức khác / Chưa rõ</option>
-                </select>
+                <label>Gia đình có sở hữu nhà, đất đai không? <span class="required">*</span></label>
+                <textarea name="realEstate" rows="2" placeholder="Mô tả số lượng nhà, đất đai, có sổ đỏ không..." required></textarea>
+            </div>
+            <div class="form-group">
+                <label>Tài sản khác (Kinh doanh, cửa hàng, xe cộ, dãy trọ...) <span class="required">*</span></label>
+                <textarea name="otherAssets" rows="2" placeholder="Ghi rõ các nguồn doanh thu hoặc tài sản giá trị khác của gia đình..." required></textarea>
+            </div>
+
+            <!-- PHẦN 4: THÔNG TIN XUẤT CẢNH VÀ DU HỌC -->
+            <h3 class="section-title">IV. LƯU TRÚ & ĐỊNH HƯỚNG DU HỌC</h3>
+            
+            <div class="form-group">
+                <label>Người nhà/người quen đang ở Hàn Quốc (nếu có)</label>
+                <input type="text" name="relativesKr" placeholder="VD: Chị gái (Đang làm hợp pháp) hoặc 'Không có'">
+            </div>
+            
+            <div class="form-group">
+                <label>Trong họ hàng có ai từng cư trú Bất Hợp Pháp tại Hàn không?</label>
+                <input type="text" name="bhpKr" placeholder="VD: Có chú ruột (đã về) hoặc 'Không có'">
             </div>
 
             <div class="form-group">
-                <label for="koreanLevel">10. Trình độ tiếng Hàn hiện tại của em là gì? <span class="required">*</span></label>
-                <input type="text" id="koreanLevel" name="koreanLevel" placeholder="VD: Đang học sơ cấp 2, hoặc TOPIK 2" required>
+                <label>Trình độ tiếng Hàn hiện tại của bạn <span class="required">*</span></label>
+                <input type="text" name="koreanLevel" placeholder="Học được bao lâu, Topik mấy..." required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group half-width">
+                    <label>Hệ dự định / Visa mong muốn <span class="required">*</span></label>
+                    <select name="studySystem" required>
+                        <option value="" disabled selected>Chọn hệ dự định du học</option>
+                        <option value="Hệ học tiếng (D4-1)">Hệ học tiếng (D4-1)</option>
+                        <option value="Hệ Đại học (D2-2)">Hệ Đại học (D2-2)</option>
+                        <option value="Hệ Thạc sĩ (D2-3)">Hệ Thạc sĩ (D2-3)</option>
+                        <option value="Khác">Chưa rõ định hướng</option>
+                    </select>
+                </div>
+                <div class="form-group half-width">
+                    <label>Trường HQ mục tiêu (nếu có)</label>
+                    <input type="text" name="krUni" placeholder="VD: Yonsei, DongA...">
+                </div>
             </div>
 
             <div class="form-group">
-                <label for="studySystem">11. Em muốn học hệ tiếng (D4-1) hay Hệ đại học (D2-2), hay thạc sỹ (D2-3)? <span class="required">*</span></label>
-                <select id="studySystem" name="studySystem" required>
-                    <option value="" disabled selected>Chọn hệ dự định du học</option>
-                    <option value="Hệ học tiếng (D4-1)">Hệ học tiếng (D4-1)</option>
-                    <option value="Hệ Đại học (D2-2)">Hệ Đại học (D2-2)</option>
-                    <option value="Hệ Thạc sĩ (D2-3)">Hệ Thạc sĩ (D2-3)</option>
-                    <option value="Chưa rõ định hướng / Cần tư vấn thêm">Chưa rõ định hướng / Cần tư vấn</option>
-                </select>
+                <label>Ghi chú khác</label>
+                <textarea name="note" rows="2" placeholder="Khu vực mong muốn, vấn đề hồ sơ..."></textarea>
             </div>
 
-            <div class="form-group">
-                <label for="majorDesire">12. Nếu đi học tiếng, thì lên chuyên ngành em muốn học chuyên ngành gì? <span class="required">*</span></label>
-                <input type="text" id="majorDesire" name="majorDesire" placeholder="VD: Truyền thông, Kinh doanh, Thẩm mỹ..." required>
-            </div>
-
-            <div class="form-group">
-                <label for="desire">13. Nguyện vọng về khu vực học của em (Seoul, Busan...) <span class="required">*</span></label>
-                <textarea id="desire" name="desire" rows="2" placeholder="Ví dụ: Em muốn học ở Seoul cho sầm uất, hoặc Busan cho dễ tìm việc làm..." required></textarea>
-            </div>
-
-            <div class="form-actions">
+            <div class="form-actions" style="margin-top:2rem">
                 <button type="submit" id="submitBtn" class="btn-submit">
                     <span class="btn-text">Gửi Yêu Cầu Tư Vấn</span>
                     <div class="loader-spinner"></div>

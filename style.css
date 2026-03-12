@@ -147,6 +147,38 @@ body {
 
 .form-group {
     margin-bottom: 1.75rem;
+    width: 100%;
+}
+
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    color: var(--secondary);
+    margin-top: 2rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary);
+    font-weight: 700;
+}
+
+.section-title:first-of-type {
+    margin-top: 0;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.half-width {
+    flex: 1;
+    min-width: calc(50% - 1rem);
+}
+
+.third-width {
+    flex: 1;
+    min-width: calc(33.333% - 1rem);
 }
 
 label {

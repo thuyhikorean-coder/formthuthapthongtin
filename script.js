@@ -1,6 +1,5 @@
 // THAY THẾ LINK NÀY BẰNG LINK WEB APP CỦA GOOGLE APPS SCRIPT
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwB_K2AIrIIPFTo3BLtPUu03hGy2IVxRJI1MpPDy653JVcEv28m0ujAj-c9bWmCF_8/exec';
-
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwTMqbF5U6XJRrSenSzLsfrP5r0BH68cqA0cpJQGUYkqSceWOpzwX6sXoyagLwDZOr-/exec';
 const form = document.getElementById('duHocForm');
 const btn = document.getElementById('submitBtn');
 const statusMsg = document.getElementById('statusMessage');
